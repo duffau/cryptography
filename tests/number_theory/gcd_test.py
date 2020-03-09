@@ -1,4 +1,4 @@
-from number_theory import gcd
+from number_theory import gcd, eea
 
 def product(numbers):
     p = 1
@@ -32,3 +32,8 @@ def test_gcd_coprime():
         n1 = product([primes[j] for j in range(0, i_max, 2)])
         n2 = product([primes[j] for j in range(1, i_max-1, 2)])
         assert gcd(n1, n2) == 1
+
+
+def test_eea_small_numbers():
+    assert eea(67, 12) == (1, -5, 28)
+    assert eea(973, 301) == (7, 13, -42)
