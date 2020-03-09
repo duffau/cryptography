@@ -1,3 +1,3 @@
-from .primes import prime_factors, primes_less_than
+from .primes import random_prime
 from .gcd import gcd, eea
 from .modular_inverse import modular_inverse

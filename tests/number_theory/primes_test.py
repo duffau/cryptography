@@ -1,4 +1,4 @@
-from number_theory.primes import prime_factors, primes_less_than, is_prime
+from number_theory.primes import prime_factors, primes_less_than, is_prime, primes_between, random_prime
 
 
 def product(numbers):
@@ -29,7 +29,21 @@ def test_is_prime():
     for prime_candidate in non_primes:
         assert not is_prime(prime_candidate)
 
+
 def test_primes_less_than():
     upper_bound = 10**5
     for prime_candidate in primes_less_than(upper_bound):
         assert is_prime(prime_candidate)
+
+
+def test_primes_between():
+    assert primes_between(0, 2) == [2, 3]
+    assert primes_between(1, 2) == [3]
+    assert primes_between(1, 3) == [3, 5, 7]
+    assert primes_between(3, 4) == [11, 13]
+
+
+def test_random_prime():
+    assert random_prime(1, 2) == 3
+    assert is_prime(random_prime(0, 16))
+
