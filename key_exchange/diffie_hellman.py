@@ -13,5 +13,5 @@ def generate_secret(n_bits):
     return getrandbits(n_bits)
 
 def calc_key(base, private_key, modulo):
-    return base**private_key % modulo
+    return pow(base, private_key, modulo)
 
