@@ -6,6 +6,7 @@ def is_divisible_by(n, q):
 
 
 def prime_factors(n):
+    '''Splitting up an integer into it's prime factors'''
     factors = []
     # Print the number of two's that divide n 
     while is_divisible_by(n, 2):
@@ -21,7 +22,7 @@ def prime_factors(n):
             factors.append(i)
             n = n / i
 
-            # Condition if n is a prime
+    # Condition if n is a prime
     # number greater than 2 
     if n > 2:
         factors.append(n)
@@ -29,7 +30,7 @@ def prime_factors(n):
 
 
 def primes_less_than(upper_bound):
-    '''Generating primes using Sieves of Eratosthenes method'''
+    '''Generating primes using th Sieve of Eratosthenes'''
     prime_indicator = [True for _ in range(upper_bound + 1)]
 
     p = 2
@@ -42,14 +43,12 @@ def primes_less_than(upper_bound):
 
 
 def primes_between(min_bits, max_bits):
-    '''Generating primes int with greatest bit bewteen min_bits and max_bits'''
+    '''Generating primes with most significant bit bewteen min_bits and max_bits'''
     min_value = 2 ** min_bits
     max_value = 2 ** max_bits
     primes = primes_less_than(max_value)
-    prime = primes[0]
-    while prime <= min_value:
+    while primes[0] <= min_value:
         del primes[0]
-        prime = primes[0]
     return primes
 
 
