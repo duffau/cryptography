@@ -15,4 +15,4 @@ A self-study project where I have implemented some simple cryptographic algorith
 
 The end goal is to implement a minimal example of something similar to the [TLS protocol](https://datatracker.ietf.org/doc/html/rfc5246) using [Diffie-Helman](./key_exchange/diffie_hellman.py) for initial key exchange and [RSA](./key_exchange/rsa.py) for symmetric encryption. 
 
-The current progress is a [client](tls_ish/client.py) and [server](tls_ish/server.py) sending encrypted strings to each other over a TCP socket adn decrypting on arrival.
+The current progress is a [client](tls_ish/client.py) and [server](tls_ish/server.py) sending encrypted strings to each other over a TCP socket and decrypting on arrival.
