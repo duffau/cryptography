@@ -8,7 +8,7 @@ def gcd(n1, n2):
 def eea(n1, n2):
     '''
     Extended Euclidean Algorithm (EEA) for GCD 
-    and factors producing the GCD from the inpus numbers. 
+    and factors producing the GCD from the input numbers. 
     '''
     s0, t0 = 1, 0 
     s1, t1 = 0, 1
